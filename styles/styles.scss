@@ -1,0 +1,117 @@
+// praimary colors
+$Purple: hsl(259, 100%, 65%);
+$Light-red: hsl(0, 100%, 67%);
+
+// neutraly
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsl(0, 0%, 86%);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: $Light-grey;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-form {
+  width: 700px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+  background-color: $White;
+  border-radius: 10px 10px 150px 10px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $Light-grey;
+  position: relative;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & label {
+      text-transform: uppercase;
+      color: $Smokey-grey;
+      font-size: small;
+    }
+    input {
+      font-size: 32px;
+      font-family: "Poppins", sans-serif;
+      width: 130px;
+      padding: 0 10px;
+      border-radius: 10px;
+      outline: none;
+      border: 1px solid;
+
+      &::placeholder {
+        color: $Smokey-grey;
+        // font-family: "Poppins", sans-serif;
+      }
+    }
+
+    p {
+      font-family: sans-serif;
+      font-size: small;
+      color: $Light-red;
+      visibility: hidden;
+    }
+  }
+}
+.output {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  p {
+    font-size: x-large;
+    font-size: 64px;
+    color: $Off-black;
+
+    span {
+      color: $Purple;
+    }
+  }
+}
+#submit {
+  position: absolute;
+  right: 0;
+  bottom: -45px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: $Purple;
+  background-image: url("../assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.error-color {
+  color: $Light-red !important;
+  visibility: visible !important;
+}
